@@ -143,9 +143,15 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var testDynamicArray = [1, 2, 3, 4, 5]; 
 
-function multiplyAnyArray(dynamicArray) { 
-
+function multiplyAnyArray(dynamicArray) {
+  var sum2=1;
+  for (var i=0; i<multArr.length; i++) {
+    sum1 = sum1 * multArr[i];
+  }
+  return sum1;
 }
+
+console.log(multiplyArray(multArr));
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
