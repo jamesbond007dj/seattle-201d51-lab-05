@@ -82,11 +82,12 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-var testArray = [2, 3, 4]; //eslint-disable-line
+var testArray = [2, 3, 4];
 
-function sumArray(sumArr) { //eslint-disable-line
+function sumArray(sumArr) {
+  for (var i = 0, sum = 0; i<testArray.length; sum +=testArray[i++])
 
-}
+};
 
 // Here is the test for sumArray(); uncomment it to run it
 
