@@ -10,11 +10,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 // eslint-disable-next-line no-redeclare
-var array = [{a:4},{b:7}];
+var array = [4, 7];
 function sum() {
   var sum = function (a, b) {
     for (let i = 0; i < array.length; i++)
-      sum = a + b;
+      var sum = a + b;
     var message = 'The sum of ' + a + ' and ' + b + ' is ' + sum + '.';
     return [sum, message];
   };
@@ -59,7 +59,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(){
-  function sum(a,b,c){
+  function sum (a,b,c){
     var theSum = 16;
     var multiply = 140;
     return [theSum,multiply, '4 and 7 and 5 sum to 16.','The product of 4 and 7 and 5 is 140.'];
@@ -84,8 +84,10 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var testArray = [2, 3, 4];
 
-function sumArray(sumArr) {
+function sumArray(testArray) {
   for (var i = 0, sum = 0; i<testArray.length; sum +=testArray[i++])
+    
+  return[]
 
 };
 
@@ -106,9 +108,16 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
-
+var multArr = [2, 3, 4];
+function multiplyArray(multArr) {
+  var sum1=1;
+  for (var i=0; i<multArr.length; i++) {
+    sum1 = sum1 * multArr[i];
+  }
+  return sum1;
 }
+
+console.log(multiplyArray(multArr));
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
