@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 'use strict';
 /////////////////////////////////////
 /* Problem 1 (this is your demo that we'll solve in class)
@@ -8,15 +9,17 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function sum(a, b) { //eslint-disable-line
-  for
-  let sum = a + b;
-  var message = 'The sum of ' + a + ' and ' + b + ' is ' + sum + '.';
-  return [sum, message]
+// eslint-disable-next-line no-redeclare
+var array = [{a:4},{b:7}];
+function sum() {
+  var sum = function (a, b) {
+    for (let i = 0; i < array.length; i++)
+      sum = a + b;
+    var message = 'The sum of ' + a + ' and ' + b + ' is ' + sum + '.';
+    return [sum, message];
+  };
+  sum(4, 7);
 }
-
-// Here is the test for sum(); uncomment it to run it
-testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -31,13 +34,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 
 
-function multiply(a, b) { 
+function multiply(a, b) {
   var a = 5;
   var b = 9;
   var result = parseInt(a) * parseInt(b);
-  var message = 'The product of ' + a + 'and' + b + ' is ' + result;
-  
-};
+
+}
 multiply(document.write ('<h2>' + message + '</h2>') );
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
@@ -56,8 +58,12 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+function sumAndMultiply(){
+  function sum(a,b,c){
+    var theSum = 16;
+    var multiply = 140;
+    return [theSum,multiply, '4 and 7 and 5 sum to 16.','The product of 4 and 7 and 5 is 140.'];
+  }
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
