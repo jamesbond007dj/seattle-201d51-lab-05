@@ -10,16 +10,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 // eslint-disable-next-line no-redeclare
-var array = [4, 7];
-function sum() {
-  var sum = function (a, b) {
+
+function sum(a, b) {
     for (let i = 0; i < array.length; i++)
-      var sum = a + b;
-    var message = 'The sum of ' + a + ' and ' + b + ' is ' + sum + '.';
-    return [sum, message];
+    return [ a+b, 'The sum of ' + a + ' and ' + b + ' is ' + (a+b) + '.'];
   };
-  sum(4, 7);
-}
+  
+  testSum(4, 7);
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -58,16 +56,25 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(){
-  function sum (a,b,c){
-    var theSum = 16;
-    var multiply = 140;
-    return [theSum,multiply, '4 and 7 and 5 sum to 16.','The product of 4 and 7 and 5 is 140.'];
-  }
+function addThree(a, b, c) {
+  return sum(sum(a,b)[0], sum(c,0)[0])[0];
+}
+// A function to multiply the three
+function multiplyThree(a, b, c) {
+  return multiply(multiply(a, b)[0], multiply(c, 1)[0])[0];
 }
 
+function sumAndMultiply(a, b, c) { //eslint-disable-line
+  var abcAdd = addThree(a, b, c);
+  var abcMult = multiplyThree(a, b, c);
+  var abcAddRet = a + ' and ' + b + ' and ' + c + ' sum to ' + abcAdd + '.';
+  var abcMultRet = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + abcMult + '.';
+  return [abcAdd, abcMult, abcAddRet, abcMultRet];
+}
+
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+ testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
